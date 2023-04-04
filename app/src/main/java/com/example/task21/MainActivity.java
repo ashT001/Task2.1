@@ -216,8 +216,45 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
+                    if(sourceType.equals("Pound")){
+                        if(destinationType.equals("Kilogram")){
+                            {            //LB > KG
+                                calc = amount/2.205;
+                                Log.d("mylog", String.valueOf(calc));
+                                finalConversion.setText(Double.toString(calc) + " Kilograms!!");
+                            }
+                        }
+                    }
 
+                if(sourceType.equals("Kilogram")){
+                    if(destinationType.equals("Pound")){
+                        {            //KG > LB
+                            calc = amount*2.205;
+                            Log.d("mylog", String.valueOf(calc));
+                            finalConversion.setText(Double.toString(calc) + " Pounds!!");
+                        }
+                    }
+                }
 
+                if(sourceType.equals("Celsius")){
+                    if(destinationType.equals("Kelvin")){
+                        {            //C > K
+                            calc = amount+273.15;
+                            Log.d("mylog", String.valueOf(calc));
+                            finalConversion.setText(Double.toString(calc) + " Kelvin!!");
+                        }
+                    }
+                }
+
+                if(sourceType.equals("Kelvin")){
+                    if(destinationType.equals("Celsius")){
+                        {            //K > C
+                            calc = amount-273.15;
+                            Log.d("mylog", String.valueOf(calc));
+                            finalConversion.setText(Double.toString(calc) + " Celsius!!");
+                        }
+                    }
+                }
 
             }
 
